@@ -1,3 +1,4 @@
+// Constants
 const passwordBox = document.getElementById("password");
 const passwordLenght = 20;
 
@@ -8,6 +9,7 @@ const specialChars = "@#$%^&*()_+~|{}[]<>/-=.;";
 
 const allChars = upperCaseChars + lowerCaseChars + numbers + specialChars
 
+// Function to create the Password
 function createPassword(){
 	let password = "";
 	password += upperCaseChars[Math.floor(Math.random() * upperCaseChars.length)];
@@ -21,6 +23,7 @@ function createPassword(){
 	passwordBox.value = password;
 }
 
+// Function to copy the password in the clipboard
 function copyPassword(){
 	passwordBox.select();
 	document.execCommand("copy");
